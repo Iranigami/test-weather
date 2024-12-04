@@ -1,8 +1,8 @@
 <template>
-  <div class="w-[270px] h-[190px] rounded-[6px] bg-[#292E44]">
-    <span class="text-very-white text-[16px]"> {{ test }}</span>
-    <div class="text-very-white text-[16px]"> {{ heat }}</div>
-    <img src="{{ icon }}" class="w-[78px] h-[78px]"/>
+  <div class="w-[270px] h-[190px] rounded-[6px] bg-[#292E44] justify-center items-center pt-[23px]">
+    <div class="text-very-white text-[14px] font-sfregular text-center leading-[15.5px]"> {{ test }}</div>
+    <div class="text-very-white text-[40px] font-sfmedium text-center mt-[4px]"> {{ heat }}</div>
+    <img src='../assets/icons/Thunderstorm.svg' class="w-[100px] h-[100px] mx-auto -mt-[18px]"/>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
   data() { 
     return { 
       test: 'Москва',
-      heat: "+13",
+      heat: "+13°",
       icon: Clear
     }; 
   }
