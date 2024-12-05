@@ -1,8 +1,9 @@
 <template>
   <div class="bg-[#161B30] min-h-screen justify-center min-w-screen">
     <Header></Header>
-    <input type="text" v-model="query" input="@onQuaryChange" class="w-[510px] h-[56px] bg-[#2A2F45] text-very-white px-5 mx-auto flex font-sfregular mt-[80px]" placeholder="Укажите город"/>
+    <input type="text" v-model="query" input="@onQuaryChange" class="max-w-[510px] min-w-[335px] h-[56px] bg-[#2A2F45] text-very-white px-5 mx-auto flex font-sfregular mt-[80px]" placeholder="Укажите город"/>
     <HomeHint></HomeHint>
+    <FavCard/>
   </div>
 </template>
 

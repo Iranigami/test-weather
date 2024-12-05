@@ -5,7 +5,7 @@
       <span class="font-sfregular text-[#8A91AB] text-[16px] text-center flex mx-auto w-[170px]">
         Начните вводить город,<br/>например, Ижевск
       </span>
-      <a href="" class="font-sfregular text-very-white text-[16px] text-center underline decoration-dashed ml-[266px] absolute mt-[-24px]">
+      <a href="/weather" class="font-sfregular text-very-white text-[16px] text-center underline decoration-dashed ml-[266px] absolute mt-[-24px]">
         Ижевск 
       </a>
     </div>

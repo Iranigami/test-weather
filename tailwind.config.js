@@ -21,7 +21,8 @@ module.exports = {
         sfbold: ['SFBold'],
         sfregular: ['SFRegular'],
         sfmedium: ['SFMedium'],
-        sfsemibold: ['SFSemibold']
+        sfsemibold: ['SFSemibold'],
+        sflight: ['SFLight']
       },
       extend: {
         spacing: {

@@ -27,3 +27,8 @@
     font-family: 'SFSemibold';
     src: url('../fonts/SF-Pro-Display-Semibold.otf');
 }
+
+@font-face {
+    font-family: 'SFLight';
+    src: url('../fonts/SF-Pro-Display-Light.otf');
+}
