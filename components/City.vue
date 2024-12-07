@@ -28,6 +28,9 @@
       <div class="mt-8 text-[#8A91AB] font-sflight text-[16px] leading-[17.71px] text-center">
         Закат в {{ "18:00" }}
       </div>
+      <div>
+        Что-то пошло не так... Попробуйте обновить страницу
+      </div>
     </template>
   
 
@@ -36,23 +39,14 @@
 import axios from 'axios';
 const route = useRoute()
 const id = route.params.name
-const getGeocode = async () => {
-    try {
-        const geocodeData = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${id}&limit=5&appid=0d4d8595ad46c5bbc0304d226f1b37b3`);
-        console.log(geocodeData);
-    } catch {
 
-    }
-};
-
-const geocodeData = await getGeocode();
-
+const dataError = ref(false);
 
 const getWeather = async () => {
     try {
-        const weatherData = await axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&units=metric&appid=0d4d8595ad46c5bbc0304d226f1b37b3`)
+        const weatherData = await axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=${route.query.lat}&lon=${route.query.lon}&units=metric&appid=3d495272e3d30889ec67b97277bbe87b`)
     } catch {
-
+      dataError.value = true;
     }
 };
 
