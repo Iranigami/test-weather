@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#161B30] min-h-screen justify-center min-w-screen">
+  <div class="min-h-screen w-[100vw] justify-center min-w-screen">
     <Header></Header>
     <input 
       type="text" 
@@ -26,6 +26,7 @@ import Header from '~/components/Header.vue';
 import HomeHint from '~/components/HomeHint.vue';
 import axios from 'axios';
 
+
 const APIKey = "0d4d8595ad46c5bbc0304d226f1b37b3";
 const searchQuery = ref('');
 const queryTimeout = ref(null);
@@ -38,8 +39,6 @@ const getSearchResults = () => {
     if (searchQuery.value!=="") {
       const result = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${searchQuery.value}&limit=5&appid=0d4d8595ad46c5bbc0304d226f1b37b3`);
       searchResults.value = result.data;
-      const cityName = 
-      console.log(searchResults);
       return;
     }
     searchResults.value = null;
