@@ -1,7 +1,12 @@
 <template>
-    <div v-for="city in favourites" :key="city.id">
+    <div class="lg:w-[872px] grid w-[335px] grid-cols-2 lg:grid-cols-3 mx-auto mt-[55px]">
+      <div 
+      v-for="city in favourites" :key="city.id"
+      class="mb-[35px] mx-auto">
       <FavCard :city="city" :icon="iconName" @click="goToCityView(city)" />
     </div>
+    </div>
+
   </template>
   
   <script setup>
