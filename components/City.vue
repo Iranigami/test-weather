@@ -10,20 +10,19 @@
       <button v-if="isFavourite()" @click="deleteFromFavourites">
         <img src="../assets/icons/Bookmark_use.svg" class="w-6 h-6"/>
       </button>
-      </div>
-
+      </div>  
       <div class="font-sfmedium text-[56px] text-very-white mx-auto w-full text-center mt-[28px]">
         {{ id }}
       </div>
       <div class="font-sflight text-[16px] text-very-white mx-auto w-full text-center mt-4 capitalize">
         {{ weatherData.data.weather[0].description }}
       </div>
-      <div class="lg:flex justify-center items-center mx-auto gap-0 lg:w-[300px] w-[224px]">
-        <span class="from-[rgba(255,255,255,100)] to-[rgba(255,255,255,0)] bg-gradient-to-b bg-clip-text text-[rgba(0,0,0,0)] text-[129.75px] font-sfsemibold mx-auto"> {{ Math.floor(weatherData.data.main.temp)}}°</span>
+      <div class="lg:flex lg:justify-center lg:items-center mx-auto lg:gap-[0px] lg:w-[300px] w-[300px] text-center">
+        <div class="from-[rgba(255,255,255,100)] to-[rgba(255,255,255,0)] bg-gradient-to-b bg-clip-text text-[rgba(0,0,0,0)] text-[129.75px] font-sfsemibold text-center w-full mx-auto"> {{ Math.floor(weatherData.data.main.temp)}}°</div>
         <img 
           alt="Weather Icon"  
           :src = "iconName" 
-          class="w-[191px] h-[191px] mx-auto"/>
+          class="w-[191px] h-[191px] lg:mt-[0] mt-[-50px] mx-auto"/>
       </div>
       <div class="flex mt-[40px] justify-center items-center gap-2">
         <img 
