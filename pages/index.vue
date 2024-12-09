@@ -16,7 +16,8 @@
           {{ searchResult.name }}, {{ searchResult.country }}
       </li>
       </ul>
-    <HomeHint></HomeHint>
+    <HomeHint v-if="!favourites.length"></HomeHint>
+    <CityList/>
   </div>
 </template>
 
@@ -32,6 +33,13 @@ const searchQuery = ref('');
 const queryTimeout = ref(null);
 const searchResults = ref(null);
 const router = useRouter();
+const favourites = ref([]);
+
+if (!import.meta.env.SSR) {
+  if (localStorage.getItem('favourites')) {
+    favourites.value = JSON.parse(localStorage.getItem('favourites'));
+  }
+}
 
 const getSearchResults = () => {
   clearTimeout(queryTimeout.value);
