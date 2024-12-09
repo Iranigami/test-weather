@@ -18,12 +18,12 @@
       <div class="font-sflight text-[16px] text-very-white mx-auto w-full text-center mt-4 capitalize">
         {{ weatherData.data.weather[0].description }}
       </div>
-      <div class="flex justify-center items-center">
-        <span class="from-[rgba(255,255,255,100)] to-[rgba(255,255,255,0)] bg-gradient-to-b bg-clip-text text-[rgba(0,0,0,0)] text-[129.75px] font-sfsemibold"> {{ Math.floor(weatherData.data.main.temp)}}°</span>
+      <div class="lg:flex justify-center items-center mx-auto gap-0 lg:w-[300px] w-[224px]">
+        <span class="from-[rgba(255,255,255,100)] to-[rgba(255,255,255,0)] bg-gradient-to-b bg-clip-text text-[rgba(0,0,0,0)] text-[129.75px] font-sfsemibold mx-auto"> {{ Math.floor(weatherData.data.main.temp)}}°</span>
         <img 
           alt="Weather Icon"  
           :src = "iconName" 
-          class="w-[191px] h-[191px]"/>
+          class="w-[191px] h-[191px] mx-auto"/>
       </div>
       <div class="flex mt-[40px] justify-center items-center gap-2">
         <img 
